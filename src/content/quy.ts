@@ -204,6 +204,15 @@ export const quy: Dict = {
     button: "APK descargay",
     note: "Android archivo (.apk). Celular mana reqsisqa origen apps instalay permiso mañaptinqa kay instalaciónllapaq activay.",
     href: "/app/Asiscole_Messenger.apk",
+    galleryTitle: "Appqa kayhina rikurin",
+    galleryDescription:
+      "Mensajes, asistencia, incidencias wan apoderado perfil — celularpi, yachay wasi kaqlla willakuyninwan.",
+    screens: [
+      { src: "/images/app_mensajes.jpg", label: "Mensajes" },
+      { src: "/images/app_asistencia.jpg", label: "Asistencias" },
+      { src: "/images/app_incidencia.jpg", label: "Incidencias" },
+      { src: "/images/app_perfil.jpg", label: "Perfil" },
+    ],
   },
   institutions: [
     {

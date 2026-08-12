@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/home/CtaBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { es } from "@/content/es";
@@ -32,6 +34,7 @@ export default async function ModulePage({ params }: Props) {
   if (!mod) notFound();
 
   const related = dict.modules.filter((m) => m.slug !== mod.slug).slice(0, 3);
+  const isMessenger = slug === "mensajeria";
 
   return (
     <>
@@ -53,7 +56,7 @@ export default async function ModulePage({ params }: Props) {
                 </li>
               ))}
             </ul>
-            {slug === "mensajeria" ? (
+            {isMessenger ? (
               <div className="mt-10 rounded-[var(--radius-lg)] border border-primary/25 bg-primary-soft/50 p-6">
                 <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold text-ink">
                   {dict.messengerApp.title}
@@ -74,14 +77,14 @@ export default async function ModulePage({ params }: Props) {
             <p className="text-sm text-muted">{dict.ui.byRyjec}</p>
             <p className="mt-3 text-sm text-muted">{dict.site.promise}</p>
             <div className="mt-6 space-y-3">
-              {slug === "mensajeria" ? (
+              {isMessenger ? (
                 <Button href={dict.messengerApp.href} className="w-full">
                   {dict.messengerApp.button}
                 </Button>
               ) : null}
               <Button
                 href={`/${locale}/contacto`}
-                variant={slug === "mensajeria" ? "secondary" : "primary"}
+                variant={isMessenger ? "secondary" : "primary"}
                 className="w-full"
               >
                 {dict.cta.primary}
@@ -90,7 +93,39 @@ export default async function ModulePage({ params }: Props) {
           </aside>
         </div>
       </Section>
-      <Section band>
+
+      {isMessenger ? (
+        <Section band>
+          <SectionHeading
+            title={dict.messengerApp.galleryTitle}
+            description={dict.messengerApp.galleryDescription}
+          />
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {dict.messengerApp.screens.map((screen, index) => (
+              <Reveal key={screen.src} delay={index * 70}>
+                <figure className="mx-auto w-full max-w-[16rem]">
+                  <div className="overflow-hidden rounded-[1.4rem] border border-border bg-ink p-2 shadow-md">
+                    <div className="overflow-hidden rounded-[1.1rem] bg-surface">
+                      <Image
+                        src={screen.src}
+                        alt={screen.label}
+                        width={390}
+                        height={844}
+                        className="h-auto w-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                  <figcaption className="mt-3 text-center text-sm font-semibold text-ink">
+                    {screen.label}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
+      <Section band={!isMessenger}>
         <SectionHeading title={dict.cta.seeModules} />
         <ul className="mt-6 grid gap-4 sm:grid-cols-3">
           {related.map((item) => (

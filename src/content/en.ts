@@ -203,6 +203,15 @@ export const en: Dict = {
     button: "Download APK",
     note: "Android file (.apk). If the phone asks for permission to install apps from unknown sources, enable it only for this install.",
     href: "/app/Asiscole_Messenger.apk",
+    galleryTitle: "This is how the app looks",
+    galleryDescription:
+      "Messages, attendance, incidents and guardian profile — on the phone, with the same school information.",
+    screens: [
+      { src: "/images/app_mensajes.jpg", label: "Messages" },
+      { src: "/images/app_asistencia.jpg", label: "Attendance" },
+      { src: "/images/app_incidencia.jpg", label: "Incidents" },
+      { src: "/images/app_perfil.jpg", label: "Profile" },
+    ],
   },
   institutions: [
     {

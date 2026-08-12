@@ -201,6 +201,15 @@ export const es = {
     button: "Descargar APK",
     note: "Archivo Android (.apk). Si el teléfono pide permiso para instalar apps de origen desconocido, actívalo solo para esta instalación.",
     href: "/app/Asiscole_Messenger.apk",
+    galleryTitle: "Así se ve la app",
+    galleryDescription:
+      "Mensajes, asistencia, incidencias y perfil del apoderado — en el celular, con la misma información del colegio.",
+    screens: [
+      { src: "/images/app_mensajes.jpg", label: "Mensajes" },
+      { src: "/images/app_asistencia.jpg", label: "Asistencias" },
+      { src: "/images/app_incidencia.jpg", label: "Incidencias" },
+      { src: "/images/app_perfil.jpg", label: "Perfil" },
+    ],
   },
   institutions: [
     {
