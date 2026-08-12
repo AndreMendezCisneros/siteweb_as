@@ -45,6 +45,13 @@ export async function generateMetadata({
       template: `%s | ${site.name}`,
     },
     description: site.description,
+    icons: {
+      icon: [
+        { url: "/images/logo_asiscole_sf.png", type: "image/png", sizes: "any" },
+        { url: "/favicon.png", type: "image/png" },
+      ],
+      apple: [{ url: "/images/logo_asiscole_sf.png" }],
+    },
     openGraph: {
       type: "website",
       locale: site.ogLocale,
@@ -52,6 +59,7 @@ export async function generateMetadata({
       siteName: site.name,
       title: `${site.name} — ${site.tagline}`,
       description: site.description,
+      images: [{ url: "/images/logo_asiscole.png", width: 512, height: 512, alt: site.name }],
     },
     alternates: {
       canonical: `/${locale}`,
