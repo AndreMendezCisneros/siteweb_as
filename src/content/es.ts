@@ -194,6 +194,14 @@ export const es = {
       benefits: ["Aulas", "Horarios", "Programación"],
     },
   ],
+  messengerApp: {
+    title: "App para familias (Android)",
+    description:
+      "Los padres y madres pueden descargar Asiscole Messenger e instalarla en su celular para recibir y enviar mensajes del colegio.",
+    button: "Descargar APK",
+    note: "Archivo Android (.apk). Si el teléfono pide permiso para instalar apps de origen desconocido, actívalo solo para esta instalación.",
+    href: "/app/Asiscole_Messenger.apk",
+  },
   institutions: [
     {
       slug: "san-ramon",

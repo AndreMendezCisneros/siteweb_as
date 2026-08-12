@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { ScreenshotFrame } from "@/components/visuals/ScreenshotFrame";
@@ -6,7 +7,23 @@ import type { Dict } from "@/lib/i18n";
 export function Hero({ locale, dict }: { locale: string; dict: Dict }) {
   return (
     <section className="relative min-h-[calc(100svh-7rem)] overflow-hidden">
-      <div className="hero-edtech absolute inset-0" aria-hidden />
+      <Image
+        src="/images/fondo.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-ink/88 via-primary/82 to-primary-hover/78"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_80%_15%,rgb(34_199_242_/_0.22),transparent_55%)]"
+        aria-hidden
+      />
       <Container className="relative grid min-h-[calc(100svh-7rem)] items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div className="max-w-xl">
           <p className="animate-fade-up font-[family-name:var(--font-syne)] text-sm font-semibold uppercase tracking-[0.18em] text-white/70">

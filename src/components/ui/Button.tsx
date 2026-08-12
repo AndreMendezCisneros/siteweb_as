@@ -34,6 +34,21 @@ export function Button({
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (href) {
+    const isFile = /\.(apk|pdf|zip|png|jpe?g|webp)$/i.test(href);
+    const isExternal = /^https?:\/\//i.test(href);
+    if (isFile || isExternal) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          download={isFile ? "" : undefined}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        >
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}

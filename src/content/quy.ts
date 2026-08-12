@@ -197,6 +197,14 @@ export const quy: Dict = {
       benefits: ["Aulas", "Horarios", "Programación"],
     },
   ],
+  messengerApp: {
+    title: "Familikunapaq app (Android)",
+    description:
+      "Tayta-mamakuna Asiscole Messenger descargayta atinku celularninkupi instalaspa yachay wasi mensajekunata chaskinapaq apachinapaq.",
+    button: "APK descargay",
+    note: "Android archivo (.apk). Celular mana reqsisqa origen apps instalay permiso mañaptinqa kay instalaciónllapaq activay.",
+    href: "/app/Asiscole_Messenger.apk",
+  },
   institutions: [
     {
       slug: "san-ramon",

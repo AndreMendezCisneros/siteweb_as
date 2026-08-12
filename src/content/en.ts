@@ -196,6 +196,14 @@ export const en: Dict = {
       benefits: ["Classrooms", "Schedules", "Programming"],
     },
   ],
+  messengerApp: {
+    title: "App for families (Android)",
+    description:
+      "Parents can download Asiscole Messenger and install it on their phone to receive and send school messages.",
+    button: "Download APK",
+    note: "Android file (.apk). If the phone asks for permission to install apps from unknown sources, enable it only for this install.",
+    href: "/app/Asiscole_Messenger.apk",
+  },
   institutions: [
     {
       slug: "san-ramon",

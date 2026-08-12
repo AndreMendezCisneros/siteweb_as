@@ -53,12 +53,37 @@ export default async function ModulePage({ params }: Props) {
                 </li>
               ))}
             </ul>
+            {slug === "mensajeria" ? (
+              <div className="mt-10 rounded-[var(--radius-lg)] border border-primary/25 bg-primary-soft/50 p-6">
+                <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold text-ink">
+                  {dict.messengerApp.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
+                  {dict.messengerApp.description}
+                </p>
+                <div className="mt-6">
+                  <Button href={dict.messengerApp.href} className="w-full sm:w-auto">
+                    {dict.messengerApp.button}
+                  </Button>
+                </div>
+                <p className="mt-4 text-xs leading-relaxed text-muted">{dict.messengerApp.note}</p>
+              </div>
+            ) : null}
           </div>
           <aside className="h-fit rounded-[var(--radius-lg)] border border-border bg-surface p-6 lg:sticky lg:top-28">
             <p className="text-sm text-muted">{dict.ui.byRyjec}</p>
             <p className="mt-3 text-sm text-muted">{dict.site.promise}</p>
-            <div className="mt-6">
-              <Button href={`/${locale}/contacto`} className="w-full">
+            <div className="mt-6 space-y-3">
+              {slug === "mensajeria" ? (
+                <Button href={dict.messengerApp.href} className="w-full">
+                  {dict.messengerApp.button}
+                </Button>
+              ) : null}
+              <Button
+                href={`/${locale}/contacto`}
+                variant={slug === "mensajeria" ? "secondary" : "primary"}
+                className="w-full"
+              >
                 {dict.cta.primary}
               </Button>
             </div>
