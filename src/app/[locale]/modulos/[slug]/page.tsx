@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/home/CtaBand";
+import { MessengerAppSection } from "@/components/home/MessengerAppSection";
 import { PageHero } from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/Button";
-import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { es } from "@/content/es";
@@ -95,34 +94,7 @@ export default async function ModulePage({ params }: Props) {
       </Section>
 
       {isMessenger ? (
-        <Section band>
-          <SectionHeading
-            title={dict.messengerApp.galleryTitle}
-            description={dict.messengerApp.galleryDescription}
-          />
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {dict.messengerApp.screens.map((screen, index) => (
-              <Reveal key={screen.src} delay={index * 70}>
-                <figure className="mx-auto w-full max-w-[16rem]">
-                  <div className="overflow-hidden rounded-[1.4rem] border border-border bg-ink p-2 shadow-md">
-                    <div className="overflow-hidden rounded-[1.1rem] bg-surface">
-                      <Image
-                        src={screen.src}
-                        alt={screen.label}
-                        width={390}
-                        height={844}
-                        className="h-auto w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
-                  <figcaption className="mt-3 text-center text-sm font-semibold text-ink">
-                    {screen.label}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </Section>
+        <MessengerAppSection locale={locale} dict={dict} showDownload={false} showModuleLink={false} />
       ) : null}
 
       <Section band={!isMessenger}>

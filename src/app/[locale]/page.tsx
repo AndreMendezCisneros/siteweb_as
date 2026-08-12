@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CtaBand } from "@/components/home/CtaBand";
 import { FaqList } from "@/components/home/FaqList";
 import { Hero } from "@/components/home/Hero";
+import { MessengerAppSection } from "@/components/home/MessengerAppSection";
 import { PersonalizationBlock } from "@/components/home/PersonalizationBlock";
 import { ModuleCard } from "@/components/modulos/ModuleCard";
 import { Reveal } from "@/components/ui/Reveal";
@@ -111,6 +112,8 @@ export default async function HomePage({
           ))}
         </div>
       </Section>
+
+      <MessengerAppSection locale={locale} dict={dict} />
 
       <Section band>
         <SectionHeading
