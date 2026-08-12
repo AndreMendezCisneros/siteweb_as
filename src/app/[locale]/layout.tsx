@@ -47,10 +47,12 @@ export async function generateMetadata({
     description: site.description,
     icons: {
       icon: [
-        { url: "/images/logo_asiscole_sf.png", type: "image/png", sizes: "any" },
-        { url: "/favicon.png", type: "image/png" },
+        { url: "/favicon.ico?v=3", sizes: "any" },
+        { url: "/favicon-32.png?v=3", type: "image/png", sizes: "32x32" },
+        { url: "/favicon.png?v=3", type: "image/png", sizes: "512x512" },
       ],
-      apple: [{ url: "/images/logo_asiscole_sf.png" }],
+      apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180" }],
+      shortcut: "/favicon.ico?v=3",
     },
     openGraph: {
       type: "website",
