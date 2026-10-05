@@ -231,20 +231,20 @@ export const quy: Dict = {
   },
   institutions: [
     {
-      slug: "san-ramon",
-      name: "I.E. San Ramón",
-      location: "Ayacucho-Huamanga",
+      slug: "institucion-a",
+      name: "Institución A",
+      location: "Ayacucho",
       status: "Producciónpi",
       description: "Asiscolewanña asistencia incidenciakunata kamachiq yachay wasi.",
-      href: "https://sanramon.asiscole.com",
+      href: "#",
     },
     {
-      slug: "jean-piaget",
-      name: "Colegio Jean Piaget",
-      location: "Ayacucho-Huamanga",
+      slug: "institucion-b",
+      name: "Institución B",
+      location: "Ayacucho",
       status: "Producciónpi",
       description: "Asiscolewanña producciónpi llamkaq yachay wasi.",
-      href: "https://jeanpiaget.asiscole.com",
+      href: "#",
     },
   ],
   plans: [
