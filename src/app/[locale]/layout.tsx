@@ -115,6 +115,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <Header
           locale={locale}
           nav={dict.nav}
+          socials={dict.site.socials}
           ctaLabel={dict.cta.primary}
           openMenuLabel={dict.ui.openMenu}
           closeMenuLabel={dict.ui.closeMenu}

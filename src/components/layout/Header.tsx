@@ -6,19 +6,23 @@ import { useEffect, useId, useRef, useState } from "react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SocialNavIcons } from "@/components/ui/SocialLinks";
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
 
 type NavLink = { href: string; label: string };
+type Social = { id: string; label: string; href: string };
 
 export function Header({
   locale,
   nav,
+  socials,
   ctaLabel,
   openMenuLabel,
   closeMenuLabel,
 }: {
   locale: string;
   nav: readonly NavLink[];
+  socials: readonly Social[];
   ctaLabel: string;
   openMenuLabel: string;
   closeMenuLabel: string;
@@ -86,6 +90,7 @@ export function Header({
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
+          <SocialNavIcons socials={socials} />
           <LanguageToggle current={locale} />
           <Button href={localized("/contacto")} variant="primary" className="!py-2.5 !text-[0.8125rem]">
             {ctaLabel}
@@ -93,6 +98,7 @@ export function Header({
         </div>
 
         <div className="flex items-center gap-2 xl:hidden">
+          <SocialNavIcons socials={socials} />
           <LanguageToggle current={locale} />
           <button
             ref={toggleRef}
