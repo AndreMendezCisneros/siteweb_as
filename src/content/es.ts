@@ -17,6 +17,13 @@ export const es = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "tiktok",
+        label: "TikTok",
+        href: "https://www.tiktok.com/@asiscole",
+      },
+    ],
   },
   cta: {
     primary: "Solicitar prueba gratuita",
@@ -537,6 +544,7 @@ export const es = {
       formDescription: "Completa los datos o escríbenos por WhatsApp.",
       whatsappLabel: "WhatsApp comercial",
       phonesTitle: "Teléfonos",
+      socialsTitle: "Redes sociales",
       afterTitle: "Qué pasa después",
       afterSteps: [
         { title: "Entendemos.", text: "Leemos el contexto de tu colegio." },
@@ -645,6 +653,7 @@ export const es = {
     product: "Producto",
     company: "Empresa",
     legal: "Legal",
+    socialsTitle: "Redes sociales",
     privacy: "Privacidad",
     terms: "Términos",
     cookies: "Cookies",

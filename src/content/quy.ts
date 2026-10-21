@@ -20,6 +20,13 @@ export const quy: Dict = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "tiktok",
+        label: "TikTok",
+        href: "https://www.tiktok.com/@asiscole",
+      },
+    ],
   },
   cta: {
     primary: "Qillqay gratis prueba",
@@ -539,6 +546,7 @@ export const quy: Dict = {
       formDescription: "Datokunata hunt'achiy utaq WhatsAppwan qillqawayku.",
       whatsappLabel: "Comercial WhatsApp",
       phonesTitle: "Teléfonos",
+      socialsTitle: "Social redes",
       afterTitle: "Qatiqpi ima kan",
       afterSteps: [
         { title: "Jap'inchik.", text: "Yachay wasiykipa contextota ñawinchayku." },
@@ -647,6 +655,7 @@ export const quy: Dict = {
     product: "Producto",
     company: "Empresa",
     legal: "Legal",
+    socialsTitle: "Social redes",
     privacy: "Privacidad",
     terms: "Términos",
     cookies: "Cookies",

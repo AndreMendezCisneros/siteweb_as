@@ -19,6 +19,13 @@ export const en: Dict = {
     phone: "+51 949 261 503",
     phones: ["+51 926 764 186", "+51 947 854 586", "+51 900 116 737"],
     whatsappDigits: "51949261503",
+    socials: [
+      {
+        id: "tiktok",
+        label: "TikTok",
+        href: "https://www.tiktok.com/@asiscole",
+      },
+    ],
   },
   cta: {
     primary: "Request free trial",
@@ -538,6 +545,7 @@ export const en: Dict = {
       formDescription: "Fill in the details or write to us on WhatsApp.",
       whatsappLabel: "Commercial WhatsApp",
       phonesTitle: "Phone numbers",
+      socialsTitle: "Social media",
       afterTitle: "What happens next",
       afterSteps: [
         { title: "We understand.", text: "We read your school context." },
@@ -646,6 +654,7 @@ export const en: Dict = {
     product: "Product",
     company: "Company",
     legal: "Legal",
+    socialsTitle: "Social media",
     privacy: "Privacy",
     terms: "Terms",
     cookies: "Cookies",
